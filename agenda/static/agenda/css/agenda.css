@@ -1,0 +1,177 @@
+.glyphicon {
+    margin-right: 5px;
+}
+
+/*.thumbnail {
+     Add shadows to create the "card" effect
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}*/
+
+/*
+.thumbnail:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}*/
+
+.thumbnail {
+    margin-bottom: 20px;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 1px;
+    border: 1px #0f0f0f;
+}
+
+/*
+.thumbnail {
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    border-radius: 5px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+    padding: 4px 0;
+}*/
+.padding-side {
+    padding: 0;
+    /*padding-left: 0;
+    padding-right: 0;*/
+}
+
+.item.list-group-item {
+    float: none;
+    width: 100%;
+    /* background-color: #fff;*/
+    margin-bottom: 10px;
+}
+
+/*
+.item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+    background: #428bca;
+}
+*/
+
+.item.list-group-item .list-group-image {
+    margin-right: 10px;
+}
+
+.list-group-image {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #777777;
+}
+
+.contact-nick {
+    margin-right: 5%;
+    float: right;
+}
+
+.item.list-group-item .thumbnail {
+    margin-bottom: 0;
+}
+
+.item.list-group-item .caption {
+    padding: 9px 9px 0 9px;
+}
+
+/*Este color salteado*/
+/*.item.list-group-item:nth-of-type(odd) {
+    background: #eeeeee;
+}*/
+
+.item.list-group-item:before, .item.list-group-item:after {
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img {
+    float: left;
+}
+
+.item.list-group-item:after {
+    clear: both;
+}
+
+.list-group-item-text {
+    margin: 0 0 11px;
+}
+
+#success_message {
+    display: none;
+}
+
+.well {
+    min-height: 20px !important;
+    margin-bottom: 20px !important;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    padding: 0 0 0 15px;
+    /*border: 0;*/
+}
+
+.thumbnail .caption {
+    color: #333;
+    padding: 9px;
+    min-height: 325px;
+    /*border: 1px solid #777777;*/
+}
+
+.caption {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.caption:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.icon-style {
+    margin-right: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-add-contact-cancel {
+    margin: 0;
+}
+
+p, a {
+    margin: 3px;
+}
+
+.well-add-contact {
+    margin-bottom: 10px;
+}
+
+.btn-add-contact {
+    margin-top: 20px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn-edit {
+    margin-left: 15px;
+}
+
+.phone-input {
+    margin-bottom: 8px;
+}
+
+.contact-display {
+    padding-bottom: 2px;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+}

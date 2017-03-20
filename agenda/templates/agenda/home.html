@@ -1,0 +1,15 @@
+{% extends 'agenda/base.html' %}
+
+{% load bootstrap3 %}
+{% block content %}
+    <div class="">
+        {% block agenda_content %}
+            {% if request.user.is_authenticated %}
+                <h1 align="center" style="position: relative">Welcome to Agenda, {{ request.user.username|title }}!</h1>
+            {% else %}
+                <h1 align="center" style="position: relative">Welcome to Agenda!</h1>
+            {% endif %}
+        {% endblock %}
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+    </div>
+{% endblock %}

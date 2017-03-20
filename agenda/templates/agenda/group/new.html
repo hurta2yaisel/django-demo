@@ -1,0 +1,29 @@
+{% extends "agenda/base.html" %}
+{% load bootstrap3 %}
+{% block agenda_content %}
+    <div class="container">
+
+        <form class="form-horizontal caption" enctype="multipart/form-data" action="{% url 'add_group' %}"
+              method="post"
+              id="contact_form" role="form"
+              data-toggle="validator">{% csrf_token %}
+            <fieldset>
+                <legend>New Group</legend>
+                {% bootstrap_form form exclude='id,user' %}
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary pull-right">Ok <span
+                                class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <a class="btn btn-default btn-add-contact-cancel pull-right"
+                           href="{% url 'list_group' %}"><span
+                                class="glyphicon glyphicon-ban-circle"></span>Cancel</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    </div><!-- /.container -->
+{% endblock %}

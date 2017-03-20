@@ -1,0 +1,64 @@
+{% extends "agenda/base.html" %}
+{% load bootstrap3 %}
+{% block agenda_content %}
+    <div class="container">
+
+        <form class="form-horizontal caption" enctype="multipart/form-data" action="{% url 'add_contact' %}"
+              method="post"
+              id="contact_form" role="form"
+              data-toggle="validator">{% csrf_token %}
+            <fieldset>
+                {% bootstrap_form form exclude='id,user' %}
+                {{ phones.management_form }}
+                <div class="form-group">
+                    <div class="phones-formset">
+                        <label class="col-md-4 control-label">Phone #</label>
+                        {% bootstrap_formset phones exclude='id,contact' %}
+                    </div>
+                </div>
+                {% comment %}{% for phone_form in phones %}
+                <div class="phones-formset">
+                    {{ phone_form.number }}
+                    {% if phone_form.number.errors %}
+                        {% for error in phone_form.number.errors %}
+                            {{ error|escape }}
+                        {% endfor %}
+                    {% endif %}
+
+                    {{ phone_form.type }}
+                    {% if phone_form.type.errors %}
+                        {% for error in phone_form.type.errors %}
+                            {{ error|escape }}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            {% if phone_formset.non_form_errors %}
+                {% for error in phone_formset.non_form_errors %}
+                    {{ error|escape }}
+                {% endfor %}
+            {% endif %}{% endcomment %}
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary pull-right">Ok <span
+                                class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <a class="btn btn-default btn-add-contact-cancel pull-right"
+                           href="{% url 'list_contact' %}"><span
+                                class="glyphicon glyphicon-ban-circle"></span>Cancel</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    </div><!-- /.container -->
+    <script type="application/javascript">
+        $('.phones-formset').formset({
+            addText: 'add phone',
+            deleteText: 'remove'
+        });
+    </script>
+{% endblock %}

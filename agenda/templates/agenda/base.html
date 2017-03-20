@@ -1,0 +1,18 @@
+{% extends 'agenda/bootstrap.html' %}
+
+{% load bootstrap3 %}
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+<title>{% block bootstrap3_title %}Agenda{% endblock %}</title>
+{% bootstrap_css %}
+
+
+{% block bootstrap3_content %}
+    <link rel="stylesheet" href="{% static 'agenda/css/agenda.css' %}"/>
+    {% include 'agenda/menu.html' %}
+    {% block agenda_content %}
+    {% endblock %}
+    {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+    <script type="application/javascript" src="{% static 'agenda/js/jquery.formset.min.js' %}"></script>
+    <script type="application/javascript" src="{% static 'agenda/js/agenda.js' %}"></script>
+{% endblock %}
